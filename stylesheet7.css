@@ -1,0 +1,132 @@
+body{
+    font-family: "HiraginoSans-W0","Hiragino Sans","ヒラギノ角ゴシック"; font-weight: 100;
+}
+/*背景画像変える！！*/
+.header{
+    font-size: 20px;
+    background-color: white;
+    height: 35px;
+}
+/*headerの背景は白に変える*/
+  .button2{
+    text-align: center;
+    margin-top: 400px;
+}
+a{
+    display       : inline-block;
+    border-radius : 25%;          /* 角丸       */
+    font-size     : 14pt;        /* 文字サイズ */
+    text-align    : center;      /* 文字位置   */
+    cursor        : pointer;     /* カーソル   */
+    padding       : 12px 12px;   /* 余白       */
+    background    : #ffffff;     /* 背景色     */
+    color         : rgba(127, 127, 127, 0.95);     /* 文字色     */
+    line-height   : 17pt;         /* 1行の高さ  */
+    opacity       : 1;           /* 透明度     */
+    transition    : .3s;         /* なめらか変化 */
+    box-shadow    : 2px 2px 4px #666666;  /* 影の設定 */
+  }
+
+  .button2:hover {
+    box-shadow    : none;        /* カーソル時の影消去 */
+    opacity       : 0.8;         /* カーソル時透明度 */
+  }
+  li{
+      list-style: none;
+  }
+  .footer{
+    background-color: white;
+    height: 170px;
+    padding: 12px;
+    margin-top: 270px;
+}
+  li{
+      list-style: none;
+  }
+.pagenumber{
+    float: right;
+    font-size: 50px;
+}
+#splash {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background:blanchedalmond;
+	z-index: 9999999;
+	text-align:center;
+	color:gray;
+}
+
+#splash-logo {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+
+/*========= 画面遷移のためのCSS ===============*/
+
+/*画面遷移アニメーション*/
+
+body{
+    background:blanchedalmond;/*遷移アニメーションと同じ色を指定*/
+}
+
+body.appear{
+    background-image: url(scenery.JPG);
+    background-size: cover;/*画面を開いた後の背景色を指定*/
+}
+
+.splashbg{
+	position: fixed;
+	top: 0;
+	right:0;
+	bottom:0;
+	left: 0;
+	border-width: 0px;/*開始はボーダーの太さは0*/
+	border-style:solid;
+    border-color:blanchedalmond;/*拡大する四角の色*/
+	animation-duration:.5s;
+	animation-fill-mode:forwards;
+}
+
+@keyframes backBoxAnime{
+	99.9% {/*アニメーション終了ぎりぎりまで*/
+        z-index: 2;/*最前面に*/
+		border-width: 0px;/*開始はボーダーの太さは0*/
+	}
+    100%{
+       z-index: -1; /*最背面に*/
+        border-width: 0px;/*終了はボーダーの太さは0*/
+    }
+}
+
+/*画面遷移の後現れるコンテンツ設定*/
+#container{
+    position: relative;
+	opacity: 0;/*はじめは透過0に*/
+}
+
+/*bodyにappearクラスがついたら出現*/
+body.appear #container{
+	animation-name:PageAnimeAppear;
+	animation-duration:1s;
+	animation-delay:0.2s;
+	animation-fill-mode:forwards;
+	opacity: 0;
+}
+
+@keyframes PageAnimeAppear{
+	0% {
+	opacity: 0;
+	}
+	100% {
+	opacity: 1;
+}
+}
+.sentence{
+    color:white;
+    float: right;
+    margin-right: 60px;
+}
