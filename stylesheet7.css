@@ -35,8 +35,6 @@ a{
       list-style: none;
   }
   .footer{
-    background-color: white;
-    height: 170px;
     padding: 12px;
     margin-top: 270px;
 }
@@ -45,8 +43,23 @@ a{
   }
 .pagenumber{
     float: right;
-    font-size: 50px;
+    font-size: 30px;
 }
+  .outline {
+    display        : inline-block;
+    color          : #595959;            /* 文字の色 */
+    font-size      : 18pt;               /* 文字のサイズ */
+    letter-spacing : 4px;                /* 文字間 */
+    text-shadow    : 
+         2px  2px 3px #ffffff,
+        -2px  2px 3px #ffffff,
+         2px -2px 3px #ffffff,
+        -2px -2px 3px #ffffff,
+         2px  0px 3px #ffffff,
+         0px  2px 3px #ffffff,
+        -2px  0px 3px #ffffff,
+         0px -2px 3px #ffffff;        /* 文字の影 */
+  }
 #splash {
 	position: fixed;
 	width: 100%;
